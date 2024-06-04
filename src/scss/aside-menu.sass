@@ -1,0 +1,95 @@
+.aside
+    min-height: 100%
+    flex: 0 1 toRem(306)
+    background: #fff
+    &__container
+        padding: toRem(36) toRem(28) 0 toRem(28)
+        display: flex
+        flex-direction: column
+        gap: toRem(30)
+        background: #fff
+
+    &__container-inner
+        display: flex
+        flex-direction: column
+        gap: toRem(64)
+        flex: 1 1 100%
+
+    &__logo
+        display: flex
+        gap: toRem(4)
+    &__logo-ver
+        font-weight: 500
+        font-size: 10px
+        letter-spacing: -0.01em
+        color: #838383
+        height: toRem(31)
+        display: flex
+        align-items: end
+    &__menu
+
+.menu
+
+    &__list
+        display: flex
+        flex-direction: column
+        gap: toRem(18)
+    &__item
+
+    &__button
+        display: flex
+        align-items: center
+        gap: toRem(14)
+        width: 100%
+        padding: toRem(11) toRem(8) toRem(11) toRem(11)
+        border-radius: toRem(8)
+        font-weight: 500
+        color: #9197b3
+        transition: 0.2s
+        letter-spacing: -0.01em
+        &_active
+            background-color: #5932EA
+            color: #fff
+            &:hover
+                background-color: #5932EA
+
+        &_has-arrow
+            position: relative
+            &::before
+                content: '>'
+                background-repeat: no-repeat
+                background-position: center
+                width: toRem(16)
+                height: toRem(16)
+                font-size: toRem(18)
+                position: absolute
+                right: toRem(8)
+                top: 50%
+                transform: translate(0,-50%)
+                bottom: 0
+                transition: 0.2s
+            &:not(.menu__button_active):hover
+                &::before
+                    right: toRem(3)
+            &.menu__button_active
+                &::before
+
+.account
+    display: flex
+    gap: toRem(12)
+    padding-bottom: 28px
+    &__img
+
+    &__info
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: toRem(2) 0
+    &__name
+        font-weight: 500
+        letter-spacing: 0.01em
+    &__position
+        font-weight: 400
+        font-size: toRem(12)
+        letter-spacing: 0.01em
+        color: #757575
