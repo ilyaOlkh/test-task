@@ -1,4 +1,161 @@
 //====================================================================================================
 .page
     flex: 1 1 auto
+    overflow: hidden auto
+    height: 100%
+
+    &__container
+        padding: toRem(41) toRem(95) toRem(41) toRem(71)
+        display: flex
+        flex-direction: column
+        gap: toRem(51)
+        margin: 0 auto
+        max-width: toRem(968+95+71)
+
+    &__title
+        font-weight: 500
+        font-size: toRem(24)
+        color: #000
+    &__content
+        border-radius: 30px
+        background-color: #fff
+        box-shadow: 0 10px 60px 0 rgba(226, 236, 249, 0.5)
+
+.content
+    &__header
+        display: flex
+        align-items: center
+        padding: toRem(30) toRem(40) toRem(40) toRem(38)
+        gap: toRem(15)
+        justify-content: space-between
+
+    &__title-wrapper
+        letter-spacing: -0.01em
+        display: flex
+        flex-direction: column
+        gap: toRem(7)
+
+    &__title
+        font-weight: 600
+        font-size: toRem(22)
+        color: #000
+    &__status
+        color: #16c098
+    &__search-wrapper
+        display: flex
+        border-radius: toRem(10)
+        background: #f9fbff
+        max-width: toRem(216)
+        padding: toRem(7) toRem(8)
+        flex: 0 1 toRem(216)
+        gap: toRem(8)
+        input
+            background: inherit
+            font-weight: 400
+            font-size: toRem(12)
+            letter-spacing: -0.01em
+            color: #68696e
+            outline: none
+            width: 100%
+            &::placeholder
+                color: #b5b7c0
+    &__table-wrapper
+        overflow: auto
+    &__table
+
+    &__footer
+        display: flex
+        justify-content: space-between
+        padding: toRem(30) toRem(40) toRem(40) toRem(30)
+        flex-wrap: wrap
+        gap: toRem(10)
+    &__data-info
+        font-weight: 500
+        font-size: 14px
+        letter-spacing: -0.01em
+        color: #b5b7c0
+    &__pages
+        display: flex
+
+    &__page-skip
+
+.pages
+    display: flex
+    gap: toRem(12)
+    &__page
+        &_active
+            .pages__button
+                background: #5932ea
+                border: 1px solid #5932ea
+                color: #fff
+    &__button
+        background: #f5f5f5
+        border: 1px solid #eee
+        border-radius: toRem(4)
+        padding: toRem(2) toRem(2)
+        width: toRem(26)
+        height: toRem(24)
+        transition: 0.2s
+        &:hover
+            background-color: #957fe3
+            color: #fff
+    &__skip
+        height: toRem(22)
+        display: flex
+        align-items: end
+
+.table
+    display: grid
+    min-width: toRem(700)
+    width: 100%
+    grid-template-columns: auto auto auto auto auto auto
+    justify-content: space-between
+    gap: toRem(20) toRem(40)
+    align-items: center
+    &__row
+        letter-spacing: -0.01em
+        font-weight: 500
+        display: contents
+        position: relative
+        &_header
+            .table__cell
+                color: #b5b7c0
+                font-weight: inherit
+                text-align: left
+    &__row-decor
+        grid-column: 1/7
+        padding: 0 toRem(40) 0 toRem(30)
+        &_first
+            padding: 0
+        div
+            border-bottom: toRem(1) solid #eee
+            width: 100%
+            height: 0px
+    &__row_header
+
+    &__cell
+        padding: toRem(5) toRem(0)
+        white-space: nowrap
+        color: #292d32
+        &:first-child
+            padding-left: toRem(30)
+        &:last-child
+            padding-right: toRem(44)
+    &__cell-status
+        padding: toRem(4) toRem(4)
+        width: toRem(80)
+        height: toRem(29)
+        display: flex
+        align-items: center
+        justify-content: center
+        font-weight: 500
+        letter-spacing: -0.01em
+        color: #df0404
+        background: #ffc5c5
+        border: 1px solid #df0404
+        border-radius: toRem(4)
+        &_active
+            background: rgba(22, 192, 152, 0.38)
+            border: 1px solid #00b087
+            color: #008767
 //====================================================================================================
