@@ -45,6 +45,8 @@
         font-weight: 600
         font-size: toRem(22)
         color: #000
+        @media (max-width: 425px)
+            font-size: toRem(18)
     &__status
         color: #16c098
     &__search-wrapper
@@ -93,23 +95,31 @@
     display: flex
     gap: toRem(12)
     overflow-x: auto
+    overflow-y: hidden
+    @media (max-width: 425px)
+        gap: toRem(5)
     &__page
         &_active
             .pages__button
                 background: #5932ea
                 border: 1px solid #5932ea
                 color: #fff
+                &:hover
+                    background: #5932ea
+
     &__button
         background: #f5f5f5
         border: 1px solid #eee
         border-radius: toRem(4)
-        padding: toRem(2) toRem(2)
+        padding: toRem(2) toRem(4)
         width: toRem(26)
         height: toRem(24)
         transition: 0.2s
         &:hover
             background-color: #957fe3
             color: #fff
+        @media (max-width: 425px)
+            width: auto
     &__skip
         height: toRem(22)
         display: flex
@@ -121,7 +131,7 @@
     width: 100%
     grid-template-columns: auto auto auto auto auto auto
     justify-content: space-between
-    gap: toRem(20) toRem(40)
+    gap: toRem(15) toRem(40)
     align-items: center
     @media (max-width: $mobile)
         gap: toRem(10) toRem(20)
